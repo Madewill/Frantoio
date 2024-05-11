@@ -1,0 +1,332 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'CopperplateCC-Bold';
+  src: url('../assets/fonts/CopperplateCC/ttf/CopperplateCC-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CopperplateCC-Light';
+  src: url('../assets/fonts/CopperplateCC/ttf/OPTICopperplate-Light.otf');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald-Regular';
+  src: url('../assets/fonts/Oswald-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('../assets/fonts/Cairo.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cairo-Bold';
+  src: url('../assets/fonts/Cairo-Bold.ttf');
+  font-style: normal;
+}
+
+
+/* SCROLL BAR CUSTOMIZATION */
+/* Define custom scrollbar styles */
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+/* Define scrollbar track */
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Define scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 5px;
+}
+
+:root {
+  --text-color: #f7c166;
+  --page-color: #060F0C;
+  --bold-font: 'CopperplateCC-Bold', serif;
+  --light-font: 'CopperplateCC-Light', serif;
+  --oswald: 'Oswald-Regular', sans-serif;
+  --Cairo: 'Cairo', sans-serif;
+  --Bold-cairo: 'Cairo-Bold', sans-serif;
+}
+
+body {
+  width: 100vw;
+  background: var(--page-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+* {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-wrapper {
+  z-index: -4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+
+.vid-overlay {
+  z-index: -4;
+  left: 0;
+  top: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.gradient-wrapper {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+}
+
+/* .overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--page-color);
+  opacity: 0.95;
+  z-index: -3;
+} */
+
+.videobg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  position: fixed;
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottomGradient {
+  height: 600px;
+  background: linear-gradient(to top, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
+}
+
+.topGradient {
+  height: 600px;
+  background: linear-gradient(to bottom, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
+}
+
+
+
+
+.planting,
+.growing,
+.harvesting,
+.crushing,
+.coldPressing,
+.bottling,
+.product-frame {
+  z-index: 2;
+}
+
+
+.text-container {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+  mix-blend-mode: exclusion; */
+  /* Blend text with video */
+  /* color: var(--text-color); */
+  /* Text color */
+  /* font-size: 60px; */
+  /* Text size */
+  /* font-weight: bold;
+  text-align: center;  */
+}
+
+.bar {
+  width: 80vw;
+  height: 2px;
+  background-color: #f7c166;
+}
+
+.bar-footer {
+  width: 100vw;
+  height: 2px;
+  background-color: #f7c166;
+}
+
+.footer-border {
+  border-top: 0.4px solid #f7c166;
+}
+
+/* h2 {
+  font-size: 50px;
+  font-weight: 900;
+  z-index: -2;
+  mix-blend-mode:overlay;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
+  z-index: -2;
+  mix-blend-mode: screen;
+} */
+
+.gif {
+  height: 250px;
+  width: 450px;
+  overflow: hidden;
+}
+
+/* Section videos */
+.plant-gif {
+  width: 700px;
+  overflow: hidden;
+}
+
+
+
+/* FONTS */
+.arabic {
+  font-family: var(--Cairo);
+  overflow: hidden;
+}
+
+.arabic-bold {
+  font-family: var(--Bold-cairo);
+  overflow: hidden;
+}
+
+.copperplate {
+  font-family: var(--light-font);
+  overflow: hidden;
+}
+
+.copperplate-Bold {
+  font-family: var(--bold-font);
+  overflow: hidden;
+}
+
+.oswald {
+  font-family: var(--oswald);
+  overflow: hidden;
+}
+
+/* input */
+
+input {
+  background-color: transparent;
+  height: 35px;
+  width: 90%;
+  border: 0.2px solid #f7c166;
+  padding-left: 20px;
+  color: #f7c166;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+/* TextArea */
+textarea {
+  padding: 10px 0px 10px 20px;
+  border: 0.2px solid #f7c166;
+  background-color: transparent;
+  width: 90%;
+  height: 122px;
+  color: #f7c166;
+  outline: none;
+}
+
+/* Buttons  */
+.send {
+  width: 140px;
+  height: 35px;
+  background-color: #f7c166;
+  color: var(--page-color);
+  font-size: 20px;
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+
+
+
+
+/* Dropdown */
+
+.dropdown {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(6, 15, 12, 1);
+  z-index: 2;
+  margin-right: 5px;
+  padding: auto;
+  border: 0.5px solid #f7c166;
+}
+
+.dropdown li {
+  border-bottom: 1px solid #f7c166;
+  padding: 20px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+/* Language Buttons */
+.buttons button {
+  padding: 10px;
+  
+}
