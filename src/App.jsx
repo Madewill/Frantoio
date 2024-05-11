@@ -8,7 +8,6 @@ import Harvesting from './components/Harvesting';
 import Crushing from './components/Crushing';
 import ColdPressing from './components/ColdPressing';
 import Bottling from './components/Bottling';
-import Main from './components/main';
 import Background from './components/Background';
 import Navigation from './components/Navigation';
 // import Frantoio from './Resource/Frantoio';
@@ -29,7 +28,7 @@ const App = () => {
               {/* Partitioning Bar */}
               {/* position will be relative to the I am absolute, left top, so will be from base of div containing menu */}
               <div className="bar mx-auto"></div>
-              
+
               < div className='w-full h-auto  flex flex-col p-[100px] justify-self-center  items-center  text-center overflow-y-hidden' >
                 {/* Text Content including the video drop div and not section, also not having html fragment */}
 
