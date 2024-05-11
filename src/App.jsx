@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Index from './utils/Frantoio';
-import Frantoio from './utils/Frantoio';
+import Index from './Resource/Frantoio';
+import Frantoio from './Resource/Frantoio';
 
 
 
