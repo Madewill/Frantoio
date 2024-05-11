@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import Index from './utils';
-// import { BrowserRouter } from 'react-router-dom';
+import Index from './utils/Frantoio';
+import Frantoio from './utils/Frantoio';
+
 
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [language, setLanguage] = useState('english');
   const [loadingProgress, setLoadingProgress] = useState(0);
-  const [toggle, setToggle] = useState(false);
+
 
   const navLinks = [
     { id: 'process', title: 'processes', arabicTitle: 'عمليات' },
@@ -43,7 +44,7 @@ const App = () => {
 
   return (
   <>
-    <Index />
+    <Frantoio />
   </>
     
   );

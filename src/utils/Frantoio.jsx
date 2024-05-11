@@ -5,7 +5,7 @@ import Home from '../components/Home';
 import LanguageSwitcher from './LanguageSwitcher';
 import { BrowserRouter } from 'react-router-dom';
 
-const Index = () => {
+const Frantoio = () => {
 
 
     return (
@@ -26,4 +26,4 @@ const Index = () => {
     )
 }
 
-export default Index;
+export default Frantoio;
