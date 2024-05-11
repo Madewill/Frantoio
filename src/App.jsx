@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Index from './Resource/Frantoio';
 import LanguageSwitcher from './Resource/LanguageSwitcher';
 import { BrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
-import Sections from './Resource/sections';
 import Footer from './components/Footer';
 import Planting from './components/Planting';
 import Growing from './components/Growing';
