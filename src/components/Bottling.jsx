@@ -49,7 +49,7 @@ const Bottling = ({ language }) => {
                     animate={titleControls}
                     className={language === 'english' ? 'copperplate-Bold text-[40px] text-center' : 'arabic-bold text-[40px] text-center'}
                 >
-                    {language === 'english' ? 'BOTTLING' : 'تعبئة الزيت'}
+                    {language === 'english' ? 'OUR PRODUCTS' : 'منتجاتنا'}
                 </motion.h3>
 
 
