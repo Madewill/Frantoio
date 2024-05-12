@@ -157,7 +157,7 @@ section {
   background: linear-gradient(to bottom, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
 } */
 
-.footer-gradient {
+/* .footer-gradient {
   z-index: -2;
   left: 0;
   bottom: 0;
@@ -165,7 +165,11 @@ section {
   width: 100vw;
   height: 1000px;
   background: linear-gradient(to top, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
-}
+} */
+
+.footer {
+  background-color: #060F0C;
+} 
 
 
 .Header-gradient {

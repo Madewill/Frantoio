@@ -84,9 +84,9 @@ const Footer = ({ language }) => {
     return (
         <>
              
-            <div  id="contact" className='footer h-[60vh] w-full relative'>
+            <div  id="contact" className='footer h-[60vh] w-full relative footer-border'>
 
-                <div className=" relative h-full w-[90vw] gap-[50px] flex flex-col lg:flex-row mx-auto py-[40px] footer-border justify-between">
+                <div className=" relative h-full w-[90vw] gap-[50px] flex flex-col lg:flex-row mx-auto py-[40px]  justify-between">
 
 
                     <motion.div  initial={{ x: -50, opacity: 0 }} animate={controls} className="flex flex-col w-[100%] h-auto box-border lg:w-[40%]">
@@ -133,7 +133,7 @@ const Footer = ({ language }) => {
                 </div>
 
                {/* Bottom Gradient */}
-               <div className="footer-gradient"></div>
+               {/* <div className="footer-gradient"></div> */}
             </div>
 
 
