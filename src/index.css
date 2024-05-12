@@ -163,7 +163,7 @@ section {
   bottom: 0;
   position: absolute;
   width: 100vw;
-  height: 450px;
+  height: 1000px;
   background: linear-gradient(to top, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
 }
 
