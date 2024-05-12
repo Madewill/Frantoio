@@ -101,7 +101,7 @@ section {
 }
 
 
-.gradient-wrapper {
+/* .gradient-wrapper {
   z-index: -1;
   position: absolute;
   top: 0;
@@ -113,7 +113,7 @@ section {
 .gradient {
   width: 100%;
   height: 100%;
-}
+} */
 
 /* .overlay {
   top: 0;
@@ -130,10 +130,10 @@ section {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: 0.4;
+  opacity: 0.2;
   position: fixed;
 }
-
+/* 
 .gradient {
   width: 100%;
   height: 100%;
@@ -145,20 +145,38 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
-.bottomGradient {
+/* .bottomGradient {
   height: 600px;
+  background: linear-gradient(to top, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
+} */
+
+/* .topGradient {
+  height: 600px;
+  background: linear-gradient(to bottom, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
+} */
+
+.footer-gradient {
+  z-index: -2;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100vw;
+  height: 450px;
   background: linear-gradient(to top, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
 }
 
-.topGradient {
-  height: 600px;
+
+.Header-gradient {
+  z-index: -2;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100vw;
+  height: 400px;
   background: linear-gradient(to bottom, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
 }
-
-
-
 
 .planting,
 .growing,
@@ -221,6 +239,29 @@ p {
   height: 250px;
   width: 450px;
   overflow: hidden;
+}
+
+.gif video {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1025px) {
+  .logo {
+    height: 80px;
+    width: 80px;
+  }
+  .gif {
+    height: 120px;
+    width: 300px;
+    overflow: hidden;
+  }
+
+  .gif video {
+    width: 100%;
+    height: 100%;
+  }
+
 }
 
 /* Section videos */
@@ -328,5 +369,5 @@ textarea {
 /* Language Buttons */
 .buttons button {
   padding: 10px;
-  
+
 }

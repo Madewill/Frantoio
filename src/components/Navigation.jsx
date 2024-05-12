@@ -13,10 +13,12 @@ const Navigation = ({ language, switchToEnglish, switchToArabic }) => {
         { id: 'contact', title: 'Contact', arabicTitle: 'اتصال' },
     ];
 
-
+{/* <div className='Header-gradient'></div> */}
 
     return (
-        <div className='navigation flex justify-between  items-center h-[auto] w-[80vw] mx-auto my-[20px]'>
+        // The navigation has a height of 15vh 
+        <div className='navigation flex justify-between  items-center overflow-y-hidden xl:h-[15vh] w-[80vw] mx-auto my-[10px]'>
+
 
             <motion.div
                 className=""
@@ -24,7 +26,7 @@ const Navigation = ({ language, switchToEnglish, switchToArabic }) => {
                 initial={{ y: -200 }} // Initial position above the viewport
                 animate={{ y: 0 }} // Animate to 0 (visible) when loaded
             >
-                <img src={language === 'english' ? '../assets/images/english.jpg' : '../assets/images/arabic-logo.jpg'} alt="" className="logo h-[100px] w-[100px]" />
+                <img src={language === 'english' ? '../assets/images/english.jpg' : '../assets/images/arabic-logo.jpg'} alt="" className="logo xl:h-[100px] w-[100px]" />
                 <div className="empty"></div>
             </motion.div>
 
@@ -41,10 +43,10 @@ const Navigation = ({ language, switchToEnglish, switchToArabic }) => {
                                 animate={{ y: 0 }}
                                 transition={{ duration: 0.8, delay: 1 }}
                                 // transition={{ duration: 0.5, delay: 0.5 }}
-                                className='list-none hidden sm:flex flex-row gap-10 items-center'
+                                className='list-none hidden sm:flex flex-row lg:gap-5  xl:gap-10 items-center'
                             >
                                 {navLinks.map((link) => (
-                                    <li key={link.id} className={`font-sans ${language === 'arabic' ? 'arabic' : 'copperplate'} hover: cursor-pointer`}>
+                                    <li key={link.id} className={`font-sans ${language === 'arabic' ? 'arabic lg:text-[16px]' : 'copperplate lg:text-[12px]'} hover: cursor-pointer`}>
                                         <a href={`#${link.id}`}>{language === 'arabic' ? link.arabicTitle : link.title}</a>
                                     </li>
                                 ))}

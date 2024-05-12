@@ -12,12 +12,12 @@ const Background = () => {
                 </div>
             </div>
 
-            <div className='gradient-wrapper'>
+            {/* <div className='gradient-wrapper'>
                 <div className="gradient">
                     <div className="topGradient"></div>
                     <div className="bottomGradient"></div>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }

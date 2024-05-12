@@ -23,79 +23,80 @@ const App = () => {
         {({ language, switchToEnglish, switchToArabic }) => (
           <BrowserRouter>
 
-            <section className='overflow-hidden'>
-              <Navigation language={language} switchToEnglish={switchToEnglish} switchToArabic={switchToArabic} />
-              {/* Partitioning Bar */}
-              {/* position will be relative to the I am absolute, left top, so will be from base of div containing menu */}
-              <div className="bar mx-auto"></div>
+          <div className='Header-gradient'></div>
+         
+            <Navigation language={language} switchToEnglish={switchToEnglish} switchToArabic={switchToArabic} />
+            
+            {/* BAR */}
+            <div className=" mx-auto w-[80vw] h-[1vh]">
+              <div className=' h-[2.5px] w-[100%] bg-[#f7c166]'></div>
+            </div>
 
-              < div className='w-full h-auto  flex flex-col p-[100px] justify-self-center  items-center  text-center overflow-y-hidden' >
-                {/* Text Content including the video drop div and not section, also not having html fragment */}
-
-                {/* uppertexts */}
-                < div className="overflow-y-hidden" >
-                  {language === 'english' ? (
-                    <h2
-                      className='copperplate-Bold text-[40px] mix-blend-overlay'>FRANTOIO LIBICO</h2>
-                  ) : (
-                    <h2 className='arabic-bold text-[40px] mix-blend-overlay'>عصر المغفل الليبي</h2>
-                  )
-                  }
+            < div className=' xl:w-full h-[80vh]  flex flex-col p-[100px] justify-self-center  items-center  text-center overflow-y-hidden' >
 
 
 
-                  {
-                    language === 'english' ? (
-                      <p
-                        className='copperplate text-[20px] mix-blend-overlay'>from Grove to Gourmet</p>
-                    ) : (
-                      <p
-                        className='arabic text-[20px] mix-blend-overlay'>من البستان إلى الطهاة الراقين</p>
-                    )
-                  }
-                </div >
-
-                {/* video gif */}
-                <div className="gif">
-                  <video autoPlay loop muted className="overflow-y-hidden">
-                    <source src="../assets/images/drop.webm" type="video/webm" />
-                  </video>
-                </div>
-
-
-                {/* lower content */}
-                <div className="lower-text overflow-y-hidden">
-                  <h3 className={language === 'arabic' ? 'arabic text-[20px] mix-blend-overlay' : 'copperplate text-[20px] mix-blend-overlay'}>
-                    {language === 'english' ? (
-                      <>
-                        <span>Welcome to Frantoio Libico, your one-stop destination</span>
-                        <br />
-                        <span>for the finest cold-pressed virgin olive oil! Embark on a</span>
-                        <br />
-                        <span>whimsical journey with us as we take you through each</span>
-                        <br />
-                        <span>step of our olive oil-making process</span>
-                      </>
-                    ) : (
-                      <>
-                        <span className=''>مرحبًا بك في فرانتويو ليبيكو،</span>
-                        <br />
-                        <span className=''>وجهتك الواحدة لأفضل زيت زيتون بكر بالضغط البارد! انطلق معنا في رحلة خيالية</span>
-                        <br />
-                        <span className=''>حيث نأخذك خطوة بخطوة من خلال عملية صنع زيت الزيتون الخاص بنا</span>
-                      </>
-                    )}
-                  </h3>
-                </div>
-
-
-
+              < div className="overflow-y-hidden box-border" >
+                {language === 'english' ? (
+                  <h2
+                    className='copperplate-Bold text-[25px] xl:text-[40px] mix-blend-overlay'>FRANTOIO LIBICO</h2>
+                ) : (
+                  <h2 className=' arabic-bold text-[25px] xl:text-[40px] mix-blend-overlay'>عصر المغفل الليبي</h2>
+                )
+                }
               </div >
 
-              {/* Background video component controlled by index.css so it spreads across all sections */}
-              <Background />
-            </section>
+              <div className="overflow-y-hidden box-border" >
+              {
+                  language === 'english' ? (
+                    <p
+                      className='copperplate lg:text-[10px] xl:text-[20px] mix-blend-overlay'>from Grove to Gourmet</p>
+                  ) : (
+                    <p
+                      className='arabic lg:text-[10px] xl:text-[20px] mix-blend-overlay'>من البستان إلى الطهاة الراقين</p>
+                  )
+                }
+              </div>
 
+
+              <div className="gif overflow-hidden">
+                <video autoPlay loop muted className="overflow-y-hidden">
+                  <source src="../assets/images/drop.webm" type="video/webm" />
+                </video>
+              </div>
+
+
+
+              <div className="lower-text overflow-y-hidden h-auto box-border">
+                <h3 className={language === 'arabic' ? 'arabic lg:text-[10px] xl:text-[20px] mix-blend-overlay' : 'copperplate lg:text-[10px] xl:text-[20px] mix-blend-overlay'}>
+                  {language === 'english' ? (
+                    <>
+                      Welcome to Frantoio Libico, your one-stop destination
+                      <br />
+                      for the finest cold-pressed virgin olive oil! Embark on a
+                      <br />
+                      whimsical journey with us as we take you through each
+                      <br />
+                      step of our olive oil-making process
+                    </>
+                  ) : (
+                    <>
+                      مرحبًا بك في فرانتويو ليبيكو،
+                      <br />
+                      وجهتك الواحدة لأفضل زيت زيتون بكر بالضغط البارد! انطلق معنا في رحلة خيالية
+                      <br />
+                      حيث نأخذك خطوة بخطوة من خلال عملية صنع زيت الزيتون الخاص بنا
+                    </>
+                  )}
+                </h3>
+              </div>
+
+
+
+            </div >
+
+            {/* Background video component controlled by index.css so it spreads across all sections */}
+            <Background />
 
             <Planting language={language} />
             <Growing language={language} />
@@ -103,7 +104,8 @@ const App = () => {
             <Crushing language={language} />
             <ColdPressing language={language} />
             <Bottling language={language} />
-            <Footer language={language} s />
+            <Footer language={language} />
+        
 
           </BrowserRouter>
         )}
