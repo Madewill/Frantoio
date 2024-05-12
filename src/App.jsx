@@ -10,11 +10,36 @@ import ColdPressing from './components/ColdPressing';
 import Bottling from './components/Bottling';
 import Background from './components/Background';
 import Navigation from './components/Navigation';
-// import Frantoio from './Resource/Frantoio';
+import { motion, AnimatePresence } from 'framer-motion';
+
 
 
 
 const App = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+
+  useEffect(() => {
+    const totalItems = 10; // Total number of items to load (adjust as needed)
+    let loadedItems = 0; // Counter for loaded items
+
+    const updateProgress = () => {
+      loadedItems++;
+      const progress = Math.floor((loadedItems / totalItems) * 100);
+      setLoadingProgress(progress);
+    };
+
+    // Simulating loading of items (replace this with actual loading logic)
+    const loadingInterval = setInterval(() => {
+      updateProgress();
+      if (loadedItems === totalItems) {
+        clearInterval(loadingInterval);
+        setIsLoaded(true); // Set isLoaded to true when loading is complete
+      }
+    }, 500);
+
+    return () => clearInterval(loadingInterval);
+  }, []);
 
   return (
     <>
@@ -22,6 +47,21 @@ const App = () => {
       <LanguageSwitcher defaultLanguage='english'>
         {({ language, switchToEnglish, switchToArabic }) => (
           <BrowserRouter>
+
+<AnimatePresence>
+          {loadingProgress < 100 && (
+            <motion.div
+              key="loader"
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '-100%' }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              className="loader"
+            >
+              <span>{loadingProgress}%</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
           <div className='Header-gradient'></div>
          

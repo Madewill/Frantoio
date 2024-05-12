@@ -371,3 +371,50 @@ textarea {
   padding: 10px;
 
 }
+
+
+/* LOADER */
+div.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  font-family: var(--light-font);
+
+  background-color: var(--page-color);
+  color: var(--text-color);
+
+  padding: 2rem;
+  font-size: 6rem;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+
+
+
+
+/* Media query for screens smaller than 768px (mobile) */
+@media only screen and (max-width: 768px) {
+  div.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    font-family: var(--light-font);
+
+    background-color: var(--page-color);
+    color: var(--text-color);
+
+    padding: 2rem;
+    font-size: 40px;
+
+    display: flex;
+    align-items: flex-end;
+  }
+}
