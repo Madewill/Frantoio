@@ -90,7 +90,7 @@ const App = () => {
                     animate={{ y: 0 }} transition={{ duration: 0.8, delay: 1 }} className="overflow-y-hidden box-border" >
                     {language === 'english' ? (
                       <h2
-                        className='copperplate-Bold text-[25px] xl:text-[40px] mix-blend-screen opacity-[60%]'>FRANTOIO LIBICO</h2>
+                        className='copperplate-Bold text-[25px] xl:text-[40px] mix-blend-screen opacity-[40%]'>FRANTOIO LIBICO</h2>
                     ) : (
                       <h2 className=' arabic-bold text-[25px] xl:text-[40px] mix-blend-screen'>عصر المغفل الليبي</h2>
                     )
