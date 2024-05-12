@@ -90,9 +90,9 @@ const App = () => {
                     animate={{ y: 0 }} transition={{ duration: 0.8, delay: 1 }} className="overflow-y-hidden box-border" >
                     {language === 'english' ? (
                       <h2
-                        className='copperplate-Bold text-[25px] xl:text-[40px] mix-blend-overlay'>FRANTOIO LIBICO</h2>
+                        className='copperplate-Bold text-[25px] xl:text-[40px] mix-blend-screen opacity-[10%]'>FRANTOIO LIBICO</h2>
                     ) : (
-                      <h2 className=' arabic-bold text-[25px] xl:text-[40px] mix-blend-overlay'>عصر المغفل الليبي</h2>
+                      <h2 className=' arabic-bold text-[25px] xl:text-[40px] mix-blend-screen'>عصر المغفل الليبي</h2>
                     )
                     }
                   </motion.div >
@@ -107,10 +107,10 @@ const App = () => {
                     {
                       language === 'english' ? (
                         <p
-                          className='copperplate lg:text-[10px] xl:text-[20px] mix-blend-overlay'>from Grove to Gourmet</p>
+                          className='copperplate lg:text-[10px] xl:text-[20px] mix-blend-screen'>from Grove to Gourmet</p>
                       ) : (
                         <p
-                          className='arabic lg:text-[10px] xl:text-[20px] mix-blend-overlay'>من البستان إلى الطهاة الراقين</p>
+                          className='arabic lg:text-[10px] xl:text-[20px] mix-blend-screen'>من البستان إلى الطهاة الراقين</p>
                       )
                     }
                   </motion.div>
@@ -138,7 +138,7 @@ const App = () => {
                     animate={{ y: 0 }}
                     transition={{ duration: 0.8, delay: 1 }}
                     className="lower-text overflow-y-hidden h-auto box-border">
-                    <h3 className={language === 'arabic' ? 'arabic lg:text-[10px] xl:text-[20px] mix-blend-overlay' : 'copperplate lg:text-[10px] xl:text-[20px] mix-blend-overlay'}>
+                    <h3 className={language === 'arabic' ? 'arabic lg:text-[10px] xl:text-[20px] mix-blend-screen opacity-[50%]' : 'copperplate lg:text-[10px] xl:text-[20px] mix-blend-screen'}>
                       {language === 'english' ? (
                         <>
                           Welcome to Frantoio Libico, your one-stop destination

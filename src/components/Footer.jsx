@@ -86,10 +86,10 @@ const Footer = ({ language }) => {
              
             <div  id="contact" className='footer h-[60vh] w-full relative'>
 
-                <div className=" relative h-full w-[90vw] flex mx-auto py-[40px] footer-border justify-between">
+                <div className=" relative h-full w-[90vw] gap-[50px] flex flex-col lg:flex-row mx-auto py-[40px] footer-border justify-between">
 
 
-                    <motion.div  initial={{ x: -50, opacity: 0 }} animate={controls} className="flex flex-col w-[40%]">
+                    <motion.div  initial={{ x: -50, opacity: 0 }} animate={controls} className="flex flex-col w-[100%] h-auto box-border lg:w-[40%]">
 
                         {language === 'english' ? (<h3 className='oswald text-[30px]'>Contact Form</h3>) : (<h3 className="arabic text-[30px]">نموذج الاتصال</h3>)}
 
