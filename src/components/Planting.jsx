@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 
 
 const Planting = ({ language }) => {
@@ -14,7 +14,7 @@ const Planting = ({ language }) => {
             if (section) {
                 const sectionTop = section.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
-                if (sectionTop < windowHeight * 0.5) {
+                if (sectionTop < windowHeight * 0.95) {
                     setIsVisible(true);
                 } else {
                     setIsVisible(false);
@@ -42,7 +42,8 @@ const Planting = ({ language }) => {
     return (
         <>
             <div   id="process" className="planting overflow-hidden px-[100px] h-auto mb-[50px]">
-                    
+                
+                <AnimatePresence>
                 <motion.h3
                     initial={{ y: 50, opacity: 0 }}
                     animate={titleControls}
@@ -50,9 +51,11 @@ const Planting = ({ language }) => {
                 >
                     {language === 'english' ? 'PLANTING' : 'زراعة البذرة'}
                 </motion.h3>
+                </AnimatePresence>
             
             <div className='flex justify-between items-center h-[500px]'>
                 
+                <AnimatePresence>
                 <motion.div className=""
                         initial={{ x: -100, opacity: 0 }}
                         animate={textControls}
@@ -81,7 +84,9 @@ const Planting = ({ language }) => {
                             </>
                         )}
                 </motion.div>
+                </AnimatePresence>
 
+               <AnimatePresence>
                 <motion.div 
                        initial={{ x: 400, opacity: 0 }}
                        animate={vidControls} className="plant-gif">
@@ -89,6 +94,7 @@ const Planting = ({ language }) => {
                         <source src="../assets/videos/seed.webm" type="video/webm" />
                     </video>
                 </motion.div>
+                </AnimatePresence>
               
 
                 </div>

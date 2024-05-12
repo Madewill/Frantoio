@@ -9,7 +9,7 @@ const Bottling = ({ language }) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const section = document.querySelector('.planting');
+            const section = document.querySelector('.bottling');
             if (section) {
                 const sectionTop = section.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
@@ -41,7 +41,7 @@ const Bottling = ({ language }) => {
 
     return (
         <>
-            <div id="products" className="growing overflow-hidden px-[100px] h-auto mb-[50px]">
+            <div id="products" className="bottling overflow-hidden px-[100px] h-auto mb-[50px]">
 
 
                 <motion.h3

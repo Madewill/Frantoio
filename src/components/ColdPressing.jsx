@@ -10,11 +10,11 @@ const ColdPressing = ({ language }) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const section = document.querySelector('.planting');
+            const section = document.querySelector('.coldpressing');
             if (section) {
                 const sectionTop = section.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
-                if (sectionTop < windowHeight * 0.5) {
+                if (sectionTop < windowHeight * 0.95) {
                     setIsVisible(true);
                 } else {
                     setIsVisible(false);
@@ -41,7 +41,7 @@ const ColdPressing = ({ language }) => {
 
     return (
         <>
-            <div id="process" className="planting overflow-hidden px-[100px] h-auto mb-[50px]">
+            <div id="process" className="coldpressing overflow-hidden px-[100px] h-auto mb-[50px]">
 
                 <motion.h3
                     initial={{ y: 50, opacity: 0 }}

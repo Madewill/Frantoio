@@ -9,11 +9,11 @@ const Crushing = ({ language }) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const section = document.querySelector('.planting');
+            const section = document.querySelector('.crushing');
             if (section) {
                 const sectionTop = section.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
-                if (sectionTop < windowHeight * 0.3 ) {
+                if (sectionTop < windowHeight * 0.95 ) {
                     setIsVisible(true);
                 } else {
                     setIsVisible(false);

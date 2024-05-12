@@ -9,11 +9,11 @@ const Growing = ({ language }) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const section = document.querySelector('.planting');
+            const section = document.querySelector('.growing');
             if (section) {
                 const sectionTop = section.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
-                if (sectionTop < windowHeight * 0.3 ) {
+                if (sectionTop < windowHeight * 0.95) {
                     setIsVisible(true);
                 } else {
                     setIsVisible(false);
@@ -41,10 +41,10 @@ const Growing = ({ language }) => {
 
     return (
         <>
-           <div   id="growing" className="growing overflow-hidden px-[100px] h-auto mb-[50px]">
+            <div id="growing" className="growing overflow-hidden px-[100px] h-auto mb-[50px]">
 
-                
-            <motion.h3
+
+                <motion.h3
                     initial={{ y: 50, opacity: 0 }}
                     animate={titleControls}
                     className={language === 'english' ? 'copperplate-Bold text-[40px] text-center' : 'arabic-bold text-[40px] text-center'}
@@ -52,19 +52,19 @@ const Growing = ({ language }) => {
                     {language === 'english' ? 'GROWING' : 'زراعة أشجار الزيتون'}
                 </motion.h3>
 
-            
+
                 <div className='flex flex-row-reverse justify-between items-center h-[500px]'>
-                    
-                <motion.div 
-                 initial={{ x: 100, opacity: 0 }}
-                 animate={textControls} className="">
+
+                    <motion.div
+                        initial={{ x: 100, opacity: 0 }}
+                        animate={textControls} className="">
                         {language === 'english' ? (
                             <>
-                             <p className='oswald text-[20px]'>
-                                As seasons change, the trees flourish, <br />
-                                their branches laden with the promise <br />
-                                of future harvests.
-                             </p>
+                                <p className='oswald text-[20px]'>
+                                    As seasons change, the trees flourish, <br />
+                                    their branches laden with the promise <br />
+                                    of future harvests.
+                                </p>
                             </>
                         ) : (
                             <>
@@ -74,16 +74,23 @@ const Growing = ({ language }) => {
                                 </p>
                             </>
                         )}
-                </motion.div>
+                    </motion.div>
 
-                <motion.div 
+                    {/* <motion.div 
                        initial={{ x: -400, opacity: 0 }}
                        animate={vidControls} className="plant-gif">
                     <video autoPlay loop muted className="overflow-y-hidden">
                         <source src="../assets/videos/tree.webm" type="video/webm" />
                     </video>
-                </motion.div>
-                
+                </motion.div> */}
+
+                    <div
+                        className="plant-gif">
+                        <video autoPlay loop muted className="overflow-y-hidden">
+                            <source src="../assets/videos/tree.webm" type="video/webm" />
+                        </video>
+                    </div>
+
                 </div>
 
             </div>

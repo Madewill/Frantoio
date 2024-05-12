@@ -10,11 +10,11 @@ const Harvesting = ({ language }) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const section = document.querySelector('.planting');
+            const section = document.querySelector('.harvesting');
             if (section) {
                 const sectionTop = section.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
-                if (sectionTop < windowHeight * 0.5) {
+                if (sectionTop < windowHeight * 0.95) {
                     setIsVisible(true);
                 } else {
                     setIsVisible(false);
@@ -42,7 +42,7 @@ const Harvesting = ({ language }) => {
 
     return (
 
-        <div  id="harvesting" className="planting overflow-hidden px-[100px] h-auto mb-[50px]">
+        <div  id="harvesting" className="harvesting overflow-hidden px-[100px] h-auto mb-[50px]">
 
             <motion.h3
                 initial={{ y: 50, opacity: 0 }}
@@ -54,7 +54,7 @@ const Harvesting = ({ language }) => {
 
 
             <div className='flex justify-between items-center h-[500px]'>
-                
+
             <motion.div
                 className=""
                 initial={{ x: -100, opacity: 0 }}

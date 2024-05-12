@@ -84,12 +84,12 @@ const Footer = ({ language }) => {
     return (
         <>
              
-            <div  id="contact" className='h-[60vh] w-full relative'>
+            <div  id="contact" className='footer h-[60vh] w-full relative'>
 
                 <div className=" relative h-full w-[90vw] flex mx-auto py-[40px] footer-border justify-between">
 
 
-                    <div className="flex flex-col w-[40%]">
+                    <motion.div  initial={{ x: -50, opacity: 0 }} animate={controls} className="flex flex-col w-[40%]">
 
                         {language === 'english' ? (<h3 className='oswald text-[30px]'>Contact Form</h3>) : (<h3 className="arabic text-[30px]">نموذج الاتصال</h3>)}
 
@@ -98,10 +98,10 @@ const Footer = ({ language }) => {
                         <textarea rows="" cols="" placeholder={language === 'english' ? 'Your Message' : 'رسالتك'} className={language === 'arabic' ? 'arabic' : 'oswald'}></textarea>
                         <button className={language === 'arabic' ? 'arabic w-[50px] send' : 'oswald w-[50px] send'}>{language === 'english' ? 'Send' : 'إرسال'}</button>
 
-                    </div>
+                    </motion.div>
 
 
-                    <div className={language === 'english' ? 'flex flex-col w-auto gap-[30px]' : 'flex flex-col w-[40%] gap-[30px]'}>
+                    <motion.div initial={{ x: 50, opacity: 0 }} animate={controls2} className={language === 'english' ? 'flex flex-col w-auto gap-[30px]' : 'flex flex-col w-[40%] gap-[30px]'}>
 
                         <div className="about">
 
@@ -128,7 +128,7 @@ const Footer = ({ language }) => {
                                 <p className="arabic">حقوق النشر © 2024 أوليوليبيكو، جميع الحقوق محفوظة</p>
                             </>)}
                         </div>
-                    </div>
+                    </motion.div>
 
                 </div>
 
