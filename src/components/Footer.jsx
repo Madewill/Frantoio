@@ -115,7 +115,7 @@ const Footer = ({ language }) => {
 
                             {language === 'english' ? (<h3 className='oswald text-[30px]'>Contact Us</h3>) : (<h3 className="arabic text-[30px]">اتصل بنا</h3>)}
 
-                            <div className='flex flex-col gap-[10px]'>
+                            <div className='flex flex-col gap-[5px]'>
 
                                 {language === 'english' ? (<p className='copperplate text-[10px]'>info@oliolibico.com</p>) : (<p className='arabic text-[10px]'>معلومات@أوليوليبيكو.كوم</p>)}
 
